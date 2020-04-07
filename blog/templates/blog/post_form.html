@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% load crispy_forms_tags %}
+		{% load static %}
+		<title>Global Pandemics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/polls/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/polls/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+				
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Blog Post -->
+			<div id="wrapper">
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Blog Post</h2>
+							<form method="POST">
+								{% csrf_token %}
+								<fieldset class="form-group">
+									{{ form|crispy }} 
+								</fieldset>
+								<br>
+								<div class="form-group">
+									<button type="submit"> Post </button>
+								</div>
+							</form>
+						</div>
+					</section>
+			</div>
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="/static/polls/js/jquery.min.js"></script>
+			<script src="/static/polls/js/jquery.scrollex.min.js"></script>
+			<script src="/static/polls/js/jquery.scrolly.min.js"></script>
+			<script src="/static/polls/js/browser.min.js"></script>
+			<script src="/static/polls/js/breakpoints.min.js"></script>
+			<script src="/static/polls/js/util.js"></script>
+			<script src="/static/polls/js/main.js"></script>
+
+	</body>
+</html>

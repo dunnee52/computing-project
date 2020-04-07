@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% load static %}
+		<title>Global Pandemics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/polls/css/main.css" />
+		<noscript><link rel="stylesheet" href="/static/polls/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+						
+						</ul>
+					</nav>
+				</div>
+			</section>				
+			<div id="wrapper">
+					<section id="intro">
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+					
+						
+					</section>
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Blog</h2>
+							<div class="features">
+								<section>
+									<h3 style="margin-left: -26%; margin-top: -11%; border-bottom: 1px solid white">{{ object.title }}</h3>
+									<p  style="margin-left: -26%; font-size: 15px; margin-top: -10%; float: right">{{ object.author }}    {{ object.date_posted|date:"F d, Y"}}</p>
+									<p  style="margin-left: -26%;">{{ object.content }}</p>
+								</section>
+							</div>
+								<a class="a1" href="{% url 'post-update' object.id %}"> Update </a>
+								<a class="a1" href="{% url 'post-delete' object.id %}"> Delete </a>
+						</div>
+					</section>
+
+			</div>
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="/static/polls/js/jquery.min.js"></script>
+			<script src="/static/polls/js/jquery.scrollex.min.js"></script>
+			<script src="/static/polls/js/jquery.scrolly.min.js"></script>
+			<script src="/static/polls/js/browser.min.js"></script>
+			<script src="/static/polls/js/breakpoints.min.js"></script>
+			<script src="/static/polls/js/util.js"></script>
+			<script src="/static/polls/js/main.js"></script>
+
+	</body>
+</html>

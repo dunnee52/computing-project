@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		{% load static %}
+		<title>Global Pandemics</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/polls/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/polls/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#two">Statistics</a></li>
+							<li><a href="#one">Share your thoughts</a></li>
+							<li><a href="#three">About Us</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>The effects of Global Pandemics</h1>
+							<p>The Statistics Website that gives students the platform to voice their opinions  <br>on the current Global Pandemic and how it affects them</a>.</p>
+							<ul class="actions">
+								<li><a href="#three" class="button scrolly">About Us</a></li>
+							</ul>
+						</div>
+					</section>
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>Statistics</h2>
+							<p>Up to date statistics that show the effects of the current Coronavirus Pandemic affecting some major European Countries.</p>
+							<div class="feature">
+								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+								<div class="elfsight-app-6466c68f-329b-4525-9aaa-f26483727be2"></div>
+							</div>
+							<br>
+							<br>
+							<div class="feature">
+								<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+								<div class="elfsight-app-f727ce2a-4f89-4954-90c5-eedd39fa97e9"></div>
+							</div>
+						</div>
+						
+					</section>
+					
+								<section id="one" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Share your thoughts!</h2>
+							<p>Here are some thoughts that some fellow students had, feel free to share your own!</p>
+							<div class="features">
+								{% for post in posts %}
+								<section>
+									<h3 style="margin-left: -26%; margin-top: -11%; border-bottom: 1px solid white"><a href="{% url 'post-detail' post.id %}"> {{ post.title }}</a></h3>
+									<p  style="margin-left: -26%; font-size: 15px; margin-top: -10%; float: right">{{ post.author }}    {{ post.date_posted|date:"F d, Y"}}</p>
+									<p  style="margin-left: -26%;">{{ post.content }}</p>
+								</section>
+								{% endfor %}
+							</div>
+							<a class ="a1" href="{% url 'post-create' %}"> Create Post </a>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>About Us</h2>
+							<p>This website was created by 3 Final Year Enterprise Computing Students</p>
+							<p>The website was developed to allow students around to country to share their thoughts on the current coronavirus outbreak</p>
+							<p> The website was developed through the use of</p>
+								<li>Django</li>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+								<li>MySQL</li>
+								<li>Google SDK</li><br>
+							<p> This website was then deployed on Google Cloud Platform </p>
+							<div>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>GitHub Link</h3>
+											<ul class="icons">
+
+												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+												
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+		<!-- Scripts -->
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="static/polls/js/jquery.min.js"></script>
+			<script src="static/polls/js/jquery.scrollex.min.js"></script>
+			<script src="static/polls/js/jquery.scrolly.min.js"></script>
+			<script src="static/polls/js/browser.min.js"></script>
+			<script src="static/polls/js/breakpoints.min.js"></script>
+			<script src="static/polls/js/util.js"></script>
+			<script src="static/polls/js/main.js"></script>
+
+	</body>
+</html>
